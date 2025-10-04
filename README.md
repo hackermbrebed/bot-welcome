@@ -1,2 +1,3 @@
 # bot-welcome
-Bot ini buat nyambut member baru dengan skrip yang simpel nyet
+Bot ini buat menyambut member baru dengan skrip yang simpel nyet.
+Kalau mau pake silahkan...
