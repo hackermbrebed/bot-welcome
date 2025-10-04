@@ -1,4 +1,4 @@
-# main.py
+# Powered bot by @hackermbrebed
 
 import os
 import logging
@@ -29,14 +29,13 @@ GLOBAL_PHOTO_FILE_ID = None
 
 # Pesan penyambutan dengan format blockquote HTML
 WELCOME_MESSAGE = (
-    "<blockquote>"
-    "👋 **Halo, {user_name}! Selamat datang di grup kami!** 🎉\n\n"
-    "Kami senang Anda bergabung. Silakan baca peraturan dan ikuti diskusi yang ada.\n\n"
-    "--- Informasi Pengguna ---\n"
-    "👤 ID Pengguna: <code>{user_id}</code>\n"
-    "📝 Username: @{user_username}\n\n"
-    "Semoga betah!"
-    "</blockquote>"
+    "<blockquote>👋𝙒𝙀𝙇𝘾𝙊𝙈𝙀, {user_name}! 𝙎𝙚𝙡𝙖𝙢𝙖𝙩 𝙗𝙚𝙧𝙜𝙖𝙗𝙪𝙣𝙜 𝙙𝙞 𝙜𝙧𝙪𝙥 𝙠𝙖𝙢𝙞🎉</blockquote>\n"
+    "𝐄𝐧𝐣𝐨𝐲 𝐚𝐣𝐚 𝐲𝐚😘. 𝐉𝐚𝐧𝐠𝐚𝐧 𝐫𝐞𝐬𝐞𝐤 𝐝𝐚𝐧 𝐢𝐤𝐮𝐭𝐢 𝐫𝐮𝐥𝐞𝐬 𝐲𝐚𝐧𝐠 𝐚𝐝𝐚!\n\n"
+    "--- 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐬𝐢 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚 ---\n"
+    "👤 𝐈𝐃 𝐏𝐞𝐧𝐠𝐠𝐮𝐧𝐚: <code>{user_id}</code>\n"
+    "📝 𝐔𝐬𝐞𝐫𝐧𝐚𝐦𝐞: @{user_username}\n"
+    "<blockquote>𝙎𝙚𝙢𝙤𝙜𝙖 𝙗𝙚𝙩𝙖𝙝!</blockquote>\n"
+    "<blockquote>𝘗𝘰𝘸𝘦𝘳𝘦𝘥 𝘣𝘰𝘵 𝘣𝘺 𝕂𝕒𝕚𝕤𝕒𝕣 𝕌𝕕𝕚𝕟👑</blockquote>"
 )
 
 # Konfigurasi tombol inline default
@@ -180,7 +179,7 @@ async def set_photo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     GLOBAL_PHOTO_FILE_ID = photo_file_id
     
     await update.message.reply_text(
-        "✅ **Foto penyambutan berhasil diatur!**\nFoto ini akan muncul pada sambutan anggota baru.",
+        "✅ Foto penyambutan berhasil diatur!\nFoto ini akan muncul pada sambutan anggota baru.",
         parse_mode='Markdown'
     )
 
@@ -192,8 +191,8 @@ async def start_set_button(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     context.user_data['setting_buttons'] = True
 
     await update.message.reply_text(
-        "📝 **Pengaturan Tombol Inline Dimulai**\n\n"
-        "Silakan masukkan **Nama Tombol** dan **URL Link** pada baris baru.\n"
+        "📝 Pengaturan Tombol Inline Dimulai\n\n"
+        "Silakan masukkan Nama Tombol dan URL Link pada baris baru.\n"
         "Formatnya adalah: `Nama Tombol Anda URL_LENGKAP`\n"
         "Contoh: `Gabung Grup https://t.me/grupAnda`\n\n"
         "Ketik `/donebutton` saat selesai, atau `/cancelbutton` untuk membatalkan."
@@ -218,7 +217,7 @@ async def done_set_button(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         GLOBAL_BUTTONS_CONFIG = new_config
         preview_markup = create_inline_keyboard(GLOBAL_BUTTONS_CONFIG)
         await update.message.reply_text(
-            "✅ **Tombol inline penyambutan berhasil diubah!**\n\n**Pratinjau:**",
+            "✅ Tombol inline penyambutan berhasil diubah!\n\nPratinjau:",
             reply_markup=preview_markup,
             parse_mode='Markdown'
         )
@@ -265,7 +264,7 @@ async def handle_button_input(update: Update, context: ContextTypes.DEFAULT_TYPE
     BUTTON_SETUP_DATA[user_id].append([button_text, url])
     
     await update.message.reply_text(
-        f"✅ Tombol ditambahkan:\nTeks: **{button_text}**\nLink: `{url}`\n\nTotal tombol: {len(BUTTON_SETUP_DATA[user_id])}. Lanjutkan atau ketik `/donebutton`.",
+        f"✅ Tombol ditambahkan:\nTeks: {button_text}\nLink: `{url}`\n\nTotal tombol: {len(BUTTON_SETUP_DATA[user_id])}. Lanjutkan atau ketik `/donebutton`.",
         parse_mode='Markdown'
     )
 
@@ -276,13 +275,13 @@ async def show_current_config(update: Update, context: ContextTypes.DEFAULT_TYPE
     
     photo_status = f"ID Foto: `{GLOBAL_PHOTO_FILE_ID}`" if GLOBAL_PHOTO_FILE_ID else "Status: TIDAK ADA FOTO DISIAPKAN"
     
-    button_list = "\n".join([f"- **{text}** -> `{url}`" for text, url in GLOBAL_BUTTONS_CONFIG])
+    button_list = "\n".join([f"- {text} -> `{url}`" for text, url in GLOBAL_BUTTONS_CONFIG])
     
     await update.message.reply_text(
-        "⚙️ **Konfigurasi Bot Saat Ini**\n\n"
-        "**Foto Penyambutan:**\n"
+        "⚙️ Konfigurasi Bot Saat Ini\n\n"
+        "Foto Penyambutan:\n"
         f"{photo_status}\n\n"
-        "**Tombol Inline:**\n"
+        "Tombol Inline:\n"
         f"{button_list}",
         parse_mode='Markdown'
     )
