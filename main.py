@@ -116,7 +116,7 @@ async def welcome_new_member(update: Update, context: ContextTypes.DEFAULT_TYPE)
         
         user_id = member.id
         user_name = member.full_name
-        user_username = member.username if member.username else 'N/A'
+        user_username = member.username if member.username else '-'
 
         formatted_message = WELCOME_MESSAGE.format(
             user_name=user_name,
