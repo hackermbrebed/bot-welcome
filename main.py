@@ -29,8 +29,11 @@ GLOBAL_PHOTO_FILE_ID = None
 
 # Pesan penyambutan dengan format blockquote HTML
 WELCOME_MESSAGE = (
-    "<blockquote>👋𝙒𝙀𝙇𝘾𝙊𝙈𝙀, {user_name}! 𝙎𝙚𝙡𝙖𝙢𝙖𝙩 𝙗𝙚𝙧𝙜𝙖𝙗𝙪𝙣𝙜 𝙙𝙞 𝙜𝙧𝙪𝙥 𝙠𝙖𝙢𝙞🎉</blockquote>\n"
-    "𝐄𝐧𝐣𝐨𝐲 𝐚𝐣𝐚 𝐲𝐚😘. 𝐉𝐚𝐧𝐠𝐚𝐧 𝐫𝐞𝐬𝐞𝐤 𝐝𝐚𝐧 𝐢𝐤𝐮𝐭𝐢 𝐫𝐮𝐥𝐞𝐬 𝐲𝐚𝐧𝐠 𝐚𝐝𝐚!\n\n"
+    "<blockquote>👋𝙒𝙀𝙇𝘾𝙊𝙈𝙀, {user_name}! 𝙎𝙚𝙡𝙖𝙢𝙖𝙩 𝙗𝙚𝙧𝙜𝙖𝙗𝙪𝙣𝙜 𝙙𝙞 𝙜𝙧𝙪𝙥 𝙠𝙖𝙢𝙞🎉</blockquote>\n\n"
+    "╭❈━━━━━━❖ ❖━━━━━━❈╮\n"
+    "┣𝐉𝐚𝐧𝐠𝐚𝐧 𝐫𝐞𝐬𝐞𝐤 𝐝𝐚𝐧 𝐢𝐤𝐮𝐭𝐢 𝐫𝐮𝐥𝐞𝐬\n"
+    "┣𝐲𝐚𝐧𝐠 𝐚𝐝𝐚!\n"
+    "╰❈━━━━━━❖ ❖━━━━━━❈╯\n"
     "╭❈━━━━━━❖ ❖━━━━━━❈╮\n"
     "┣|ɪᴅ ➭  <code>{user_id}</code>\n"
     "┣|ᴜsᴇʀɴᴀᴍᴇ ➭   @{user_username}\n"
@@ -41,7 +44,7 @@ WELCOME_MESSAGE = (
 
 # Konfigurasi tombol inline default
 GLOBAL_BUTTONS_CONFIG = [
-    ['Baca Aturan', 'https://example.com/rules'],
+    ['🤖𝙋𝙚𝙢𝙞𝙡𝙞𝙠 𝘽𝙊𝙏', 'https://t.me/udiens123'],
 ]
 
 # Variabel untuk menampung data tombol sementara saat proses /setbutton
